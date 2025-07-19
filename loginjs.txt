@@ -1,0 +1,18 @@
+// login.js
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // Simple login check (for demo only)
+  if (username === "situ" && password === "3425") {
+    // Save login state (for example in localStorage)
+    localStorage.setItem("loggedIn", "true");
+
+    // Redirect to homepage (e.g., index.html)
+    window.location.href = "index.html";
+  } else {
+    document.getElementById("errorMsg").innerText = "Invalid username or password.";
+  }
+});
